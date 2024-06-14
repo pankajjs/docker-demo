@@ -29,11 +29,19 @@
   docker build -t image-name path-of-project
   docker build -t node-app .
 ```
-### Create docker volume
+### Create docker volume to persists data across container restarts
 ```
   docker volume create volume_database
 ```
 ### Attach a vloume with container
 ```
-  docker run -v volume_database:/data/db container_id_or_name
+  docker run -v volume_database:/data/db image_name
+```
+### Create a network to establish cummnication across containers
+```
+  docker network create custom_network
+```
+### Attach a network with container
+```
+  docker run --network custom_network --name container_name image_name
 ```
