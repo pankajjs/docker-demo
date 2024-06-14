@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  docker-demo-app:
+    build: .
+    container_name: "docker-demo-app"
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./:/app" # bind project folder to container working directory for hot reloading
+volumes:
+  app: # create volumes
+  

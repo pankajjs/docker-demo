@@ -45,3 +45,7 @@
 ```
   docker run --network custom_network --name container_name image_name
 ```
+### Removes container, images, networks, volumes
+```
+  docker system prune
+```
