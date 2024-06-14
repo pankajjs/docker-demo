@@ -24,4 +24,9 @@
 ```
   docker kill container_id/container_name
 ```
+#### Create a custom docker image
+```
+  docker build -t image-name path-of-project
+  docker build -t node-app .
+```
 
