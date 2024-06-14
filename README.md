@@ -29,4 +29,11 @@
   docker build -t image-name path-of-project
   docker build -t node-app .
 ```
-
+### Create docker volume
+```
+  docker volume create volume_database
+```
+### Attach a vloume with container
+```
+  docker run -v volume_database:/data/db container_id_or_name
+```

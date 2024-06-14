@@ -2,9 +2,13 @@ From node:20-alpine
 
 WORKDIR /app
 
-COPY . .
+COPY package* .
 
 RUN npm install
+
+COPY . .
+
+# RUN npm install
 # RUN npm run dev
 
 EXPOSE 3000
